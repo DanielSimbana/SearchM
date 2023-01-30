@@ -24,7 +24,6 @@ public class App {
             e++;
         }while(e < ary.length);
 
-
         System.out.println("\n Ingrese un numero a buscar");
         int seh = sc.nextInt();
         if (Binario(ary, seh) == -1){
@@ -32,15 +31,13 @@ public class App {
         }else{
             System.out.println("El numero se encuentra en la posicion "+ Binario(ary, seh)+" del array");
         }
-
-      
     }
 
     public static int Binario(int[] ary, int valor) {
 
             int left = 0;
             int right = ary.length - 1;
-            
+          
             while (left <= right) {
               int middle = (left + right) / 2;
               if (ary[middle] == valor) {
@@ -51,7 +48,6 @@ public class App {
                 right = middle - 1;
               }
             }
-            
             return -1;
     }
 }
